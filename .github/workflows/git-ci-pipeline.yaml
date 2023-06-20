@@ -15,9 +15,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: azure/docker-login@v1
         with:
-           login-server: githublokiacr.azurecr.io
-           username: githublokiacr
-           password: 9CewGmHFqp/RUC5JLRRAOQKAzkKixmj6hKGFL1dUpp+ACRCpbZFV
+           login-server: testgit.azurecr.io
+           username: testgit
+           password: KI4g6bMGERQ3Vu4nooOwTkH2HylPaeWYiuQmB/ASq++ACRDE72lO
       - run: |
           docker build . -t ${{ secrets.ACR_ENDPOINT }}/knowledgefactory:${{ github.sha }}
           docker push ${{ secrets.ACR_ENDPOINT }}/knowledgefactory:${{ github.sha }}
