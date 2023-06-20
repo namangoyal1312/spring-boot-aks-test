@@ -19,5 +19,5 @@ jobs:
            username: testgit
            password: KI4g6bMGERQ3Vu4nooOwTkH2HylPaeWYiuQmB/ASq++ACRDE72lO
       - run: |
-          docker build . -t ${{ secrets.ACR_ENDPOINT }}/testgit:${{ github.sha }}
-          docker push ${{ secrets.ACR_ENDPOINT }}/testgit:${{ github.sha }}
+          docker build . -t testgit.azurecr.io/testgit:${{ github.sha }}
+          docker push testgit.azurecr.io/testgit:${{ github.sha }}
